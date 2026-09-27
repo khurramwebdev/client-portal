@@ -1,0 +1,225 @@
+.client-project-switcher {
+  max-width: 220px;
+  min-width: 150px;
+  min-height: 36px;
+  padding: 0 30px 0 11px;
+  border: 1px solid var(--border-strong);
+  border-radius: 9px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 11px;
+}
+
+.client-action-copy,
+.client-file-note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.client-file-note {
+  margin: 11px 0 0;
+  font-size: 10px;
+}
+
+.client-upload-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.client-file-picker {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 42px;
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 13px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #080e0f;
+  color: #bdcbc7;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.client-file-picker:hover {
+  border-color: var(--border-strong);
+  background: #0d1515;
+}
+
+.client-file-picker span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.client-file-picker input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.client-action-button {
+  min-height: 42px;
+  padding: 0 17px;
+  white-space: nowrap;
+}
+
+.client-action-feedback {
+  margin: 12px 0;
+  padding: 10px 12px;
+  border: 1px solid #2b594d;
+  border-radius: 9px;
+  background: #10221e;
+  color: #a8eed9;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.client-action-feedback.is-error {
+  border-color: #624343;
+  background: #211313;
+  color: #ffbfbd;
+}
+
+.client-file-button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.client-file-button:hover {
+  color: var(--mint);
+}
+
+.file-row .file-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.client-message-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.client-form-label {
+  color: #d0ddda;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.client-message-input {
+  min-height: 130px;
+  padding: 12px;
+  line-height: 1.6;
+}
+
+.client-message-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.client-message-submit-row > span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.client-message-list {
+  display: grid;
+  gap: 12px;
+}
+
+.client-message-item {
+  padding: 15px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel-soft);
+}
+
+.client-message-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.client-message-meta strong {
+  color: var(--text);
+  font-size: 11px;
+}
+
+.client-message-meta span {
+  padding: 4px 7px;
+  border: 1px solid #28564c;
+  border-radius: 999px;
+  color: #a8eed9;
+  font-size: 9px;
+}
+
+.client-message-meta time {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.client-message-item p {
+  margin: 11px 0 0;
+  color: #c3cfcb;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 760px) {
+  .client-project-switcher {
+    width: min(42vw, 190px);
+    min-width: 0;
+    max-width: 190px;
+  }
+
+  .client-upload-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .client-file-picker {
+    min-height: 44px;
+  }
+
+  .client-message-meta time {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .client-message-submit-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .client-action-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .client-file-button.file-open {
+    font-size: 10px;
+  }
+
+  .client-file-button.file-open::after {
+    content: none;
+  }
+}
